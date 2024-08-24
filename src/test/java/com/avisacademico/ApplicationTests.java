@@ -1,10 +1,10 @@
-package com.avisacademico.avisacademico;
+package com.avisacademico;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AvisacademicoApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
