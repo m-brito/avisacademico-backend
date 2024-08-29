@@ -2,7 +2,6 @@ package com.avisacademico.domain.model.user;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,10 +19,12 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
     private String username;
     private String password;
     private String email;
     private String photo;
+    private boolean active = true;
     private LocalDateTime createdAt;
 
     @ManyToMany
@@ -38,12 +39,20 @@ public class User implements UserDetails {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public String getPhoto() {
         return photo;
+    }
+
+    public boolean isActive() {
+        return active;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -74,8 +83,6 @@ public class User implements UserDetails {
     public String getUsername() {
         return username;
     }
-
-
 
     @Override
     public boolean isAccountNonExpired() {
