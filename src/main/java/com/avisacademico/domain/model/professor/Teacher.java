@@ -8,16 +8,16 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Professor {
+public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
 
-    public Professor(Long id, String nome) {
+    public Teacher(Long id, String nome) {
         this.id = id;
         this.nome = nome;
     }
 
-    public Professor() {}
+    public Teacher() {}
 }
