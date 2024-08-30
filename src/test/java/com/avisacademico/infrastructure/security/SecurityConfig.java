@@ -1,4 +1,4 @@
-package com.avisacademico.infrastructure.config;
+package com.avisacademico.infrastructure.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
