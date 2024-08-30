@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/register-teacher")
+@RequestMapping("/cadastrar-professor")
 public class ProfessorController {
 
     private final ProfessorService professorService;
